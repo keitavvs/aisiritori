@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AIしりとり</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AIしりとり</h1>
+      <p class="subtitle">ひらがなだけで ことば をいれてね。20かいまであそべるよ！</p>
+    </header>
+
+    <section class="panel">
+      <div class="rule">
+        <h2>ルール</h2>
+        <ul>
+          <li>ひらがなだけ つかってね</li>
+          <li>おなじことばは つかえないよ</li>
+          <li>さいごが「ー」なら 1つまえの もじで つぎをはじめるよ</li>
+          <li>ちいさい もじで おわったら おおきい もじから はじめるよ</li>
+          <li>「ん」で おわったら まけ！</li>
+        </ul>
+      </div>
+      <div class="status">
+        <div id="turn">のこり: <span id="left">20</span> かい</div>
+        <div id="next">はじめは なんでも いいよ</div>
+        <div id="msg"></div>
+      </div>
+      <div class="input-row">
+        <input id="word" type="text" inputmode="kana" placeholder="ことばをいれてね（ひらがな）" />
+        <button id="send">おくる ▶</button>
+        <button id="reset" class="ghost">リセット</button>
+      </div>
+    </section>
+
+    <section class="history">
+      <h2>れきし</h2>
+      <ol id="list"></ol>
+    </section>
+
+    <footer>
+      <small>Gemini API をつかっています。つかうまえに .env で APIキー をいれてね。</small>
+    </footer>
+  </div>
+
+  <script src="/static/main.js"></script>
+</body>
+</html>
