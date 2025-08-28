@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  background: #f7f9fc; color: #1f2937; line-height: 1.6;
+}
+.container { max-width: 760px; margin: 0 auto; padding: 16px; }
+header { text-align: center; margin: 12px 0 8px; }
+h1 { margin: 0; font-size: 32px; }
+.subtitle { color: #4b5563; margin-top: 4px; }
+.panel { background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
+.rule h2, .history h2 { font-size: 20px; margin: 8px 0; }
+.status { display: flex; gap: 12px; flex-wrap: wrap; margin: 8px 0; color: #374151; }
+#msg { color: #2563eb; }
+.input-row { display: flex; gap: 8px; margin-top: 8px; }
+.input-row input { flex: 1; padding: 12px 14px; font-size: 18px; border-radius: 10px; border: 1px solid #d1d5db; }
+.input-row button { padding: 12px 16px; font-size: 16px; border-radius: 10px; border: none; background: #2563eb; color: white; cursor: pointer; }
+.input-row button:hover { opacity: .9; }
+.input-row .ghost { background: #e5e7eb; color: #111827; }
+.history { margin-top: 16px; }
+#list { background: #fff; border-radius: 12px; padding: 12px 16px; box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
+#list li { padding: 6px 0; border-bottom: 1px dashed #e5e7eb; }
+#list li:last-child { border-bottom: none; }
+footer { text-align: center; color: #6b7280; margin: 18px 0; }
+@media (max-width: 520px) {
+  h1 { font-size: 26px; }
+  .input-row { flex-direction: column; }
+  .input-row button { width: 100%; }
+}
